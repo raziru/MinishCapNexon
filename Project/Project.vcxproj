@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c175474e-70cd-4198-a496-2da93f0da9f4}</ProjectGuid>
+    <RootNamespace>Project</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../;./</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Framework.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./;../;_Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>_Library</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Utility\Math.h" />
+    <ClInclude Include="Object\LOZ\Actor\Effect\Fire.h" />
+    <ClInclude Include="Object\LOZ\Actor\Effect\Laser.h" />
+    <ClInclude Include="Object\LOZ\BackGround\BossRoom.h" />
+    <ClInclude Include="Object\LOZ\BackGround\BossRoom1.h" />
+    <ClInclude Include="Object\LOZ\BackGround\Dungeon.h" />
+    <ClInclude Include="Object\LOZ\Actor\MonsterManager\MonsterManager.h" />
+    <ClInclude Include="Object\LOZ\BackGround\BackGround.h" />
+    <ClInclude Include="Object\LOZ\Map\Map.h" />
+    <ClInclude Include="Object\LOZ\Actor\Effect.h" />
+    <ClInclude Include="Object\LOZ\Actor\Link.h" />
+    <ClInclude Include="Object\LOZ\Actor\Monster\BlueOcta.h" />
+    <ClInclude Include="Object\LOZ\Actor\Monster\Monster.h" />
+    <ClInclude Include="Object\LOZ\Actor\Monster\Octa.h" />
+    <ClInclude Include="Object\LOZ\Actor\Monster\RedOcta.h" />
+    <ClInclude Include="Object\LOZ\Actor\Monster\Vatti.h" />
+    <ClInclude Include="Object\LOZ\Actor\Monster\YellowOcta.h" />
+    <ClInclude Include="Object\LOZ\Actor\Zelda.h" />
+    <ClInclude Include="Object\LOZ\BackGround\Town.h" />
+    <ClInclude Include="Object\LOZ\Stage\Stage.h" />
+    <ClInclude Include="Object\LOZ\Tile\Tile.h" />
+    <ClInclude Include="Object\LOZ\Actor\Weapon\Sword.h" />
+    <ClInclude Include="Object\LOZ\Actor\Weapon\SpinSword.h" />
+    <ClInclude Include="Object\LOZ\Tile\TransparentTile.h" />
+    <ClInclude Include="Object\LOZ\Tile\TileManager.h" />
+    <ClInclude Include="Object\LOZ\Stage\Stage1.h" />
+    <ClInclude Include="Object\LOZ\Stage\Stage2.h" />
+    <ClInclude Include="Object\LOZ\Actor\MonsterManager\OctaManager.h" />
+    <ClInclude Include="Utility\BinaryReader.h" />
+    <ClInclude Include="Utility\BinaryWriter.h" />
+    <ClInclude Include="System\Camera.h" />
+    <ClInclude Include="Object\Collision\ColliderCircle.h" />
+    <ClInclude Include="Object\Collision\ColliderRect.h" />
+    <ClInclude Include="Object\Collision\Collider.h" />
+    <ClInclude Include="Object\Game\Actor.h" />
+    <ClInclude Include="Render\Texture\Animation.h" />
+    <ClInclude Include="Render\Texture\Frame.h" />
+    <ClInclude Include="Object\Basic\Polygons.h" />
+    <ClInclude Include="System\Environment.h" />
+    <ClInclude Include="Render\Buffer\ConstantBuffer.h" />
+    <ClInclude Include="Object\Basic\Object.h" />
+    <ClInclude Include="Render\Buffer\IndexBuffer.h" />
+    <ClInclude Include="Render\Shader\PixelShader.h" />
+    <ClInclude Include="System\Device.h" />
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="MainGame.h" />
+    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="Object\Transform.h" />
+    <ClInclude Include="Render\Texture\Texture.h" />
+    <ClInclude Include="Utility\Font.h" />
+    <ClInclude Include="Utility\Keyboard.h" />
+    <ClInclude Include="Utility\SoundManager.h" />
+    <ClInclude Include="Utility\Time.h" />
+    <ClInclude Include="Utility\Singleton.h" />
+    <ClInclude Include="Render\Buffer\VertexBuffer.h" />
+    <ClInclude Include="Render\Shader\VertexShader.h" />
+    <ClInclude Include="Utility\Vector2.h" />
+    <ClInclude Include="Scene\ZeldaScene.h" />
+    <ClInclude Include="Object\LOZ\Actor\Weapon\Weapon.h" />
+    <ClInclude Include="Object\LOZ\Actor\MonsterManager\VattiManager.h" />
+    <ClInclude Include="__Others\Resource.h" />
+    <ClInclude Include="__Others\targetver.h" />
+    <ClInclude Include="Render\Buffer\VertexLayout.h" />
+    <ClInclude Include="Render\Buffer\GlobalBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Utility\Math.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Effect\Fire.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Effect\Laser.cpp" />
+    <ClCompile Include="Object\LOZ\BackGround\BossRoom.cpp" />
+    <ClCompile Include="Object\LOZ\BackGround\BossRoom1.cpp" />
+    <ClCompile Include="Object\LOZ\BackGround\Dungeon.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\MonsterManager\MonsterManager.cpp" />
+    <ClCompile Include="Object\LOZ\BackGround\BackGround.cpp" />
+    <ClCompile Include="Object\LOZ\Map\Map.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Effect.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Link.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Monster\BlueOcta.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Monster\Monster.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Monster\Octa.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Monster\RedOcta.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Monster\Vatti.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Monster\YellowOcta.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Zelda.cpp" />
+    <ClCompile Include="Object\LOZ\BackGround\Town.cpp" />
+    <ClCompile Include="Object\LOZ\Stage\Stage.cpp" />
+    <ClCompile Include="Object\LOZ\Tile\Tile.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Weapon\Sword.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Weapon\SpinSword.cpp" />
+    <ClCompile Include="Object\LOZ\Tile\TransparentTile.cpp" />
+    <ClCompile Include="Object\LOZ\Tile\TileManager.cpp" />
+    <ClCompile Include="Object\LOZ\Stage\Stage1.cpp" />
+    <ClCompile Include="Object\LOZ\Stage\Stage2.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\MonsterManager\OctaManager.cpp" />
+    <ClCompile Include="Utility\BinaryReader.cpp" />
+    <ClCompile Include="Utility\BinaryWriter.cpp" />
+    <ClCompile Include="System\Camera.cpp" />
+    <ClCompile Include="Object\Collision\ColliderCircle.cpp" />
+    <ClCompile Include="Object\Collision\ColliderRect.cpp" />
+    <ClCompile Include="Object\Collision\Collider.cpp" />
+    <ClCompile Include="Object\Game\Actor.cpp" />
+    <ClCompile Include="Render\Texture\Animation.cpp" />
+    <ClCompile Include="Render\Texture\Frame.cpp" />
+    <ClCompile Include="Object\Basic\Polygons.cpp" />
+    <ClCompile Include="System\Environment.cpp" />
+    <ClCompile Include="Render\Buffer\ConstantBuffer.cpp" />
+    <ClCompile Include="Object\Basic\Object.cpp" />
+    <ClCompile Include="Render\Buffer\IndexBuffer.cpp" />
+    <ClCompile Include="Render\Shader\PixelShader.cpp" />
+    <ClCompile Include="System\Device.cpp" />
+    <ClCompile Include="Framework.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainGame.cpp" />
+    <ClCompile Include="Render\Buffer\VertexBuffer.cpp" />
+    <ClCompile Include="Render\Shader\VertexShader.cpp" />
+    <ClCompile Include="Object\Transform.cpp" />
+    <ClCompile Include="Render\Texture\Texture.cpp" />
+    <ClCompile Include="Utility\Font.cpp" />
+    <ClCompile Include="Utility\Keyboard.cpp" />
+    <ClCompile Include="Utility\SoundManager.cpp" />
+    <ClCompile Include="Utility\Time.cpp" />
+    <ClCompile Include="Utility\Vector2.cpp" />
+    <ClCompile Include="Scene\ZeldaScene.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\Weapon\Weapon.cpp" />
+    <ClCompile Include="Object\LOZ\Actor\MonsterManager\VattiManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="__Others\Project.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="__Others\Project.ico" />
+    <Image Include="__Others\small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="_Shader\PixelLine.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="_Shader\PixelTexture.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="_Shader\PixelTutorial.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="_Shader\VertexLine.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="_Shader\VertexTexture.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="_Shader\VertexTutorial.hlsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
